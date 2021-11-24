@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import HeaderLayout from './components/Header-Layout/InstagramHeader';
+import InstaLayout from './components/Insta-Layout/InstaLayout';
+import { auth } from './initializers/firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Login from './initializers/Login';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+  const [user] = useAuthState(auth);
+  
+  const _stylesLayout = {
+    max_container: {
+        margin: 0,
+        padding: 0,
+        height: '100%',
+        width: '100%',
+        position: 'absolute',
+        justifyContent:'center',
+        alignItems:'center',
+        display:'flex',
+        backgroundColor:'#fafafa',
+        zIndex:'-11',
+    }
+  };
+    return (
+      user ?
+      <div style={_stylesLayout.max_container}>
+        <HeaderLayout/>
+        <InstaLayout/>
+      </div>
+      :
+        <Login/>
+    );
+};
 export default App;
