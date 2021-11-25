@@ -21,11 +21,11 @@ const ButtonProfile = () => {
             display:'flex',
             height:'min-content',
             width:'min-content',
-
+            marginLeft:'24px',
         },
         img: {
-            height: '30px',
-            width: '30px',
+            height: '22px',
+            width: '22px',
             borderRadius: '50%',
             display: 'flex'
         },

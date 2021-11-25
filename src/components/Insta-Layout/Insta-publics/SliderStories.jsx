@@ -26,7 +26,8 @@ const SliderStories = () => {
         arrowContent:{
             margin: 0,
             display:'flex',
-            
+            opacity:'30%',
+            cursor: 'pointer',        
         },
         
     };
@@ -35,7 +36,6 @@ const SliderStories = () => {
             <div style={_stylesLayout.arrowContent}>
             <img src={arrowL} alt=""/>
             </div>
-            <ScrollMenu >
                 <Story/>
                 <Story/>
                 <Story/>
@@ -43,7 +43,6 @@ const SliderStories = () => {
                 <Story/>
                 <Story/>
                 <Story/>
-            </ScrollMenu>
             
             <div style={_stylesLayout.arrowContent}>
             <img src={arrowR} alt=""/>

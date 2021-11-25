@@ -1,7 +1,8 @@
 import React, { Component, useState } from 'react';
-import ButtonProfile from './Header-Buttons/ButtonProfile';
 import SearchBar from './Header-Buttons/SearchBar';
+import IconsHeader from './Header-Buttons/IconsHeader';
 import InstaLogo from './../../assets/instagramletra.png';
+
 
 //contenedore principal de los items del header
 const HeaderLayout = () => {
@@ -27,7 +28,7 @@ const HeaderLayout = () => {
         },
         sub_container:{
             display:'flex',
-            width:'975px',
+            width:'90%',
             height:'100%',
             justifyContent:'space-between',
             alignItems:'center',
@@ -38,6 +39,7 @@ const HeaderLayout = () => {
             display: 'flex',
             margin: 0,
             padding: 0,
+            cursor: 'pointer',
         },
     };
     return (
@@ -47,7 +49,7 @@ const HeaderLayout = () => {
                     <img style={_stylesLayout.font_insta} src={InstaLogo} alt="INSTAGRAM"/>
                 </div>
                 <SearchBar/>
-                <ButtonProfile/>
+                <IconsHeader/>
             </div>
         </div> 
     );
