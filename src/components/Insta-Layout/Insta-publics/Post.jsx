@@ -165,7 +165,6 @@ const Post = () => {
             borderColor: '#dbdbdb',
             display:'flex',
             paddingRight:'5px',
-
         },
         inputStyle:{
             display:'flex',
@@ -174,6 +173,10 @@ const Post = () => {
             border: 'none',
             margin: 0,
         },
+        divfoter:{
+            display:'flex',
+            
+        }
 
         
     };
@@ -209,18 +212,24 @@ const Post = () => {
                 onMouseOut={() => setOpacity3('1')}/>
             </div>
             <div>
-                <p style={_stylesLayout.decorationHover1}> 1000k de me gustas</p>
-                    <div style="display: 'flex'">
+                <div>
+                    <p style={_stylesLayout.decorationHover1}> 1000k de me gustas</p>
+                    <div style= {_stylesLayout.divfoter}>
                         <p style={_stylesLayout.decorationHover2} 
                         onMouseEnter={() => setUnderlineText2('underline')}
                         onMouseOut={() => setUnderlineText2('none')}>Cheemsito</p><p style={_stylesLayout.textSec1}> bla bla bla</p>
                     </div>
-                <p style={_stylesLayout.textSec}>ver los 131 comentarios</p>
-                <p style={_stylesLayout.textSec}>HACE UN DÍA</p>
-                <div style ={_stylesLayout.footerIcons}>
-                    <img style ={_stylesLayout.emojiIcon} src={iconEmoji} alt=""/>
-                    <input style ={_stylesLayout.inputStyle} placeholder="añade un comentario" type="" name="comentar"/>
+                    <p style={_stylesLayout.textSec}>ver los 131 comentarios</p>
+                    <p style={_stylesLayout.textSec}>HACE UN DÍA</p>
                 </div>
+                
+                    <div style ={_stylesLayout.footerIcons}>
+                        <img style ={_stylesLayout.emojiIcon} src={iconEmoji} alt=""/>
+                        <input style ={_stylesLayout.inputStyle} placeholder="añade un comentario" type="" name="comentar"/>
+                        <div>
+                            Publicar
+                        </div>
+                    </div>
                 
             </div>
             
